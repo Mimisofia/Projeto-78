@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Álbum de Família</title>
+</head>
+<body>
+    <h1>Meu Álbum de Família</h1>
+    <img src="https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.clickfamilia.org.br%2Foikos2015%2Findex.php%2Ffamilia-para-que%2F&psig=AOvVaw1PmrQsG3_nWgfkFiM16Ah_&ust=1650125179112000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCICG1ry5lvcCFQAAAAAdAAAAABAY" style="width: 30%;"
+    id="familyMemberImage">
+    <button onclick="update();">Próximo</button>
+    <h4 id="familyMemberName"></h4>
+    
+</body>
+
+
+<script>
+var images =
+["https://drive.google.com/file/d/1Tm7E6Gf5yAb9G0zXhOCK-IdPqCdrXpLR/view?usp=sharing",
+"https://drive.google.com/file/d/1kYGaRkQGYuQh8CNAIwtD7qnp8V3YL_o9/view?usp=sharing",
+"https://drive.google.com/file/d/1AL13UonSQA-oxqFvobAIMl_9fCSGeTad/view?usp=sharing",
+"https://drive.google.com/file/d/12xWTaYQMnxVNHstuul5hR-I42WHoFEeb/view?usp=sharing",
+"https://drive.google.com/file/d/13rvNyA5X_kAatzm6N8XFsWwyKZ8t8JvA/view?usp=sharing",
+"https://drive.google.com/file/d/1cC4CdT_roUpLSG7fz7EKx4bWyF8WWWTx/view?usp=sharing",];
+
+var names =  ["Álbum de Família","Mírian","família"];
+
+
+var i = 0
+function update()
+{
+
+ i++;
+ var numbersOfFamilyMemberInArray = 5
+ if(i> numbersOfFamilyMemberInArray )
+ {
+     i = 0;
+ }
+ var updateImage = images [i];
+ var updatedName = names [i];
+ 
+ document.getElementById("familyMemberImage").src = updatedImage;
+ document.getElementById("familyMemberName").innerHTML = updatedName;
+
+}
+
+
+
+
+
+
+</script>
+</html>
